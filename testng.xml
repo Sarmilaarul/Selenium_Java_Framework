@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+  <test thread-count="3" name="Test">
+       <groups>
+      <run>
+      <include name="Cart"/>
+      </run>
+      </groups>
+
+    <classes>
+ 
+      <class name="tests.errorValidation">
+      <methods>
+      <exclude name="emailValidation"/>
+      </methods>
+      </class>     
+      
+      <class name="tests.searchProduct"/>     
+      
+      <class name="tests.submitOrdertest"/>
+ 
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
